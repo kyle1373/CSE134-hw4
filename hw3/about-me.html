@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kyle Wade Website" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Kyle Wade" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="images/favicon.ico" rel="icon" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Kyle Wade's Website</title>
+    <style>
+      main {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .information {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      h6 {
+        font-family: "RobotoCondensed", sans-serif;
+        color: white;
+        font-size: 2vw;
+      }
+      .profile-picture {
+        border-radius: 180px;
+        border: 4px solid white;
+        margin: auto;
+        width: 16vw;
+        height: 16vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The navbar -->
+    <header>
+      <section>
+        <nav>
+          <ul class="nav-icon">
+            <li><a class="link" href="index.html">Kyle Wade</a></li>
+          </ul>
+          <ul class="nav-options">
+            <li><a class="link" href="about-me.html">About me</a></li>
+            <li>
+              <a
+                class="link"
+                href="https://kyle1373.github.io/kyle-wade-resume/"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <!-- Main content. It contains a lot of test tags and an introduction. In the future, this will be more centralized and focused -->
+    <main>
+      <div>
+        <div class="information">
+          <img
+            src="images/kyle-wade-pfp.webp"
+            alt="Kyle Wade"
+            class="profile-picture"
+          />
+          <h6>
+            Hi there! I'm Kyle, a university student passionate about software
+            development and entrepreneurship. I enjoy playing the piano, hiking,
+            and skiing!
+          </h6>
+        </div>
+      </div>
+    </main>
+
+    <!-- These are a bunch of test elements. They are only here because they did not fit elsewhere on the website -->
+  </body>
+
+  <!-- Footer of the website. It contains information about my github and a reload page functionality -->
+  <footer>
+    <span>
+      <a class="link" href="https://github.com/kyle1373">Github</a>
+    </span>
+  </footer>
+</html>
