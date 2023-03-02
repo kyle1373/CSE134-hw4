@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="purify/dist/purify.min.js"></script>
+    <meta name="nativedialogs" content="Kyle Wade Native Dialogs" />
+    <title>Kyle Wade Native Dialogs</title>
+    <style>
+      * {
+        font-family: "Roboto Condensed", sans-serif;
+        color: #000000;
+      }
+      h1 {
+        font-size: 200%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <hr />
+      <h1>Alerts</h1>
+    </header>
+    <main>
+      <div class="fourBtns">
+        <button id="alertBtn" type="button">Alert</button>
+        <button id="confirmBtn" type="button">Confirm</button>
+        <button id="promptBtn" type="button">Prompt</button>
+        <button id="spromptBtn" type="button">Safer Prompt</button>
+      </div>
+      <script type="text/javascript" src="purify/dist/purify.min.js"></script>
+      <script>
+        document
+          .getElementById("alertBtn")
+          .addEventListener("click", () => {
+            alert("Alert Pressed!");
+          });
+        document
+          .getElementById("confirmBtn")
+          .addEventListener("click", () => {
+            outputPrompt.hidden = true;
+            outputPrompt = document.getElementById("outputPrompt");
+            const response = confirm("Are you sure you want to do that?");
+            outputPrompt.hidden = false;
+            outputPrompt.innerHTML = "Confirm result : " + response;
+          });
+        document
+          .getElementById("promptBtn")
+          .addEventListener("click", () => {
+            outputPrompt.hidden = true;
+
+            outputPrompt = document.getElementById("outputPrompt");
+
+            var input = prompt("Enter something: ");
+
+            outputPrompt.hidden = false;
+
+            if (input === "") {
+                outputPrompt.innerHTML = "Prompt result : User didn't enter anything";
+              return;
+            }
+            outputPrompt.innerHTML = "Prompt result : " + input;
+          });
+        document
+          .getElementById("spromptBtn")
+          .addEventListener("click", () =>  {
+            outputPrompt.hidden = true;
+
+            outputPrompt = document.getElementById("outputPrompt");
+
+            let input = prompt("Enter something:");
+            
+            input = DOMPurify.sanitize(input);
+
+            outputPrompt.hidden = false;
+
+            if (input === "") {
+              outputPrompt.innerHTML = "Prompt result : User didn't enter anything";
+              return;
+            }
+            
+            outputPrompt.innerHTML = "Prompt result : " + input;
+          });
+      </script>
+
+      <output id="confirmationOutput">
+        <p
+          id="outputPrompt"
+          style="border: 5px double black; font-size: 1.5rem"
+          hidden
+        ></p>
+      </output>
+    </main>
+  </body>
+</html>
