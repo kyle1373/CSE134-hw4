@@ -26,21 +26,21 @@
       <h1>Alerts</h1>
     </header>
     <main>
-      <div class="fourBtns">
-        <button id="alertBtn" type="button">Alert</button>
-        <button id="confirmBtn" type="button">Confirm</button>
-        <button id="promptBtn" type="button">Prompt</button>
-        <button id="spromptBtn" type="button">Safer Prompt</button>
+      <div class="fourButtons">
+        <button id="alertButton" type="button">Alert</button>
+        <button id="confirmButton" type="button">Confirm</button>
+        <button id="promptButton" type="button">Prompt</button>
+        <button id="spromptButton" type="button">Safer Prompt</button>
       </div>
       <script type="text/javascript" src="purify/dist/purify.min.js"></script>
       <script>
         document
-          .getElementById("alertBtn")
+          .getElementById("alertButton")
           .addEventListener("click", () => {
             alert("Alert Pressed!");
           });
         document
-          .getElementById("confirmBtn")
+          .getElementById("confirmButton")
           .addEventListener("click", () => {
             outputPrompt.hidden = true;
             outputPrompt = document.getElementById("outputPrompt");
@@ -49,7 +49,7 @@
             outputPrompt.innerHTML = "Confirm result : " + response;
           });
         document
-          .getElementById("promptBtn")
+          .getElementById("promptButton")
           .addEventListener("click", () => {
             outputPrompt.hidden = true;
 
@@ -66,7 +66,7 @@
             outputPrompt.innerHTML = "Prompt result : " + input;
           });
         document
-          .getElementById("spromptBtn")
+          .getElementById("spromptButton")
           .addEventListener("click", () =>  {
             outputPrompt.hidden = true;
 
@@ -90,7 +90,9 @@
       <output id="confirmationOutput">
         <p
           id="outputPrompt"
-          style="border: 5px double black; font-size: 1.5rem"
+          style="border: 4px double black; 
+          padding: 5px;
+          font-size: 1.5rem;"
           hidden
         ></p>
       </output>

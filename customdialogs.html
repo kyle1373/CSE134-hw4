@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="purify/dist/purify.min.js"></script>
+    <meta name="nativedialogs" content="Kyle Wade Native Dialogs" />
+    <title>Kyle Wade Native Dialogs</title>
+    <style>
+      * {
+        font-family: "Roboto Condensed", sans-serif;
+        color: #000000;
+      }
+      h1 {
+        font-size: 200%;
+      }
+    </style>
+    <script async src="customdialog.js"></script>
+  </head>
+  <body>
+    <button id="showAlert" class="btn">Alert</button>
+    <button id="showConfirm" class="btn">Confirm</button>
+    <button id="showName" class="btn">Prompt</button>
+
+    <dialog id="alertDialog">
+      <p id="dialogP">Alert pressed!</p>
+      <form method="dialog">
+        <button id="okBtn">Ok</button>
+      </form>
+    </dialog>
+
+    <dialog id="confirmDialog">
+      <p id="dialogP2">Do you confirm this</p>
+      <form method="dialog">
+        <button id="cancelConfirm">Cancel</button>
+        <button id="okConfirm">Ok</button>
+      </form>
+    </dialog>
+
+    <dialog id="nameDialog">
+      <p>What is your name?</p>
+      <input id="nameInput" type="text" />
+      <button id="cancelName">Cancel</button>
+      <button id="okName">Ok</button>
+    </dialog>
+
+    <br />
+
+    <output id="confirmationOutput">
+      <p
+        id="outputPrompt"
+        style="border: 4px double black; padding: 5px; font-size: 1.5rem"
+        hidden
+      ></p>
+    </output>
+  </body>
+</html>
