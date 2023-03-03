@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="purify/dist/purify.min.js"></script>
+    <meta name="nativedialogs" content="Kyle Wade Native Dialogs" />
+    <title>Kyle Wade Blog</title>
+    <style>
+      * {
+        font-family: "Roboto Condensed", sans-serif;
+        color: #000000;
+      }
+      h1 {
+        font-size: 200%;
+      }
+    </style>
+    <script async src="blog.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Kyle Wade's Posts</h1>
+      <hr/>
+    </header>
+    <ul id="postList"></ul>
+    <button onclick="showPostModal()">Add Post</button>
+    <dialog id="dialog">
+      <form method="nofunction">
+        <label>Title: </label>
+        <br/>
+        <input id="titleInput" type="text" name="title" />
+        <br/>
+        <br/>
+        <label>Summary: </label>
+        <br/>
+        <input id="summaryInput" type="text" name="summary" />
+        <br/>
+        <br/>
+        <br/>
+        <button onclick="addPost()">Post</button>
+        <button onclick="hidePostModal()">Cancel</button>
+      </form>
+    </dialog>
+  </body>
+</html>
