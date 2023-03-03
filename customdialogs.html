@@ -16,9 +16,9 @@
       <h1>Custom Dialogs</h1>
       <hr/>
     </header>
-    <button id="showAlert" class="btn">Alert</button>
-    <button id="showConfirm" class="btn">Confirm</button>
-    <button id="showName" class="btn">Prompt</button>
+    <button id="showAlert" onclick="showAlert()" >Alert</button>
+    <button id="showConfirm" onclick="showConfirm()">Confirm</button>
+    <button id="showName" onclick="showName()">Prompt</button>
 
     <dialog id="alertDialog">
       <p id="dialogP">Alert pressed!</p>
@@ -30,16 +30,16 @@
     <dialog id="confirmDialog">
       <p id="dialogP2">Do you confirm this</p>
       <form method="dialog">
-        <button id="cancelConfirm">Cancel</button>
-        <button id="okConfirm">Ok</button>
+        <button onclick="cancelConfirm()">Cancel</button>
+        <button onclick="okConfirm()">Ok</button>
       </form>
     </dialog>
 
     <dialog id="nameDialog">
       <p>What is your name?</p>
       <input id="nameInput" type="text" />
-      <button id="cancelName">Cancel</button>
-      <button id="okName">Ok</button>
+      <button onclick="cancelName()">Cancel</button>
+      <button onclick="okName()">Ok</button>
     </dialog>
 
     <br />
