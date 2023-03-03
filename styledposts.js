@@ -77,10 +77,12 @@ const showPosts = () => {
     const deleteButton = document.createElement("button");
 
     editButton.setAttribute('onclick', 'editPost(' + i + ')');
-    editButton.textContent = 'Edit';
+    editButton.setAttribute('id', 'editButton');
+    editButton.textContent = `✏`;
 
     deleteButton.setAttribute('onclick', 'deletePost(' + i + ')');
-    deleteButton.textContent = 'Delete';
+    editButton.setAttribute('id', 'deleteButton');
+    deleteButton.textContent = '🗑';
 
     createdItem.appendChild(editButton);
     createdItem.appendChild(deleteButton);
@@ -93,14 +95,10 @@ const showPosts = () => {
 const showPostModal = () => {
   postIndex = -1;
   document.getElementById("dialog").showModal();
-  document.getElementById("titleInput").value = "";
-  document.getElementById("summaryInput").value = "";
 };
 
 const hidePostModal = () => {
   document.getElementById("dialog").hideModal();
-  document.getElementById("titleInput").value = "";
-  document.getElementById("summaryInput").value = "";
 };
 
 showPosts();
