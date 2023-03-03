@@ -93,14 +93,10 @@ const showPosts = () => {
 const showPostModal = () => {
   postIndex = -1;
   document.getElementById("dialog").showModal();
-  document.getElementById("titleInput").value = "";
-  document.getElementById("summaryInput").value = "";
 };
 
 const hidePostModal = () => {
   document.getElementById("dialog").hideModal();
-  document.getElementById("titleInput").value = "";
-  document.getElementById("summaryInput").value = "";
 };
 
 showPosts();
