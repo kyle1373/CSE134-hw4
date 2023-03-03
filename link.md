@@ -1,7 +1,3 @@
-Name: Kyle Wade
-
-PID: A16245654
-
 URL: https://sunny-moxie-b0d604.netlify.app/
 
 Part 1: https://sunny-moxie-b0d604.netlify.app/nativedialogs.html
