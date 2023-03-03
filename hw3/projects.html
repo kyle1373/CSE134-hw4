@@ -10,28 +10,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Kyle Wade's Website</title>
     <style>
-      main {
-        text-align: center;
-        justify-content: center;
-      }
-      .information {
-        display: inline-block;
-      }
-      h6 {
-        font-family: "RobotoCondensed", sans-serif;
-        color: white;
-        font-size: max(1em, 2vw);
-        margin-left: 3em;
-        margin-right: 3em;
-      }
-      .profile-picture {
-        border-radius: 180em;
-        border: 0.2em solid white;
-        margin: auto;
-        width: 16vw;
-        height: 16vw;
-        min-width: 15em;
-        min-height: 15em;
+      * {
+        font-family: "RobotoCondensedBold", sans-serif;
       }
     </style>
   </head>
@@ -45,7 +25,14 @@
           </ul>
           <ul class="nav-options">
             <li><a class="link" href="about-me.html">About me</a></li>
-            <li><a class="link" href="projects.html">Projects</a></li>
+            <li>
+              <a
+                style="text-decoration: underline"
+                class="link"
+                href="projects.html"
+                >Projects</a
+              >
+            </li>
             <li>
               <a
                 class="link"
@@ -59,6 +46,24 @@
     </header>
     <!-- Main content. It contains a lot of test tags and an introduction. In the future, this will be more centralized and focused -->
     <main>
+      <br />
+      <br />
+      <iframe
+        height="800em"
+        width="100%"
+        id="momenteventsframe"
+        src="https://momentevents.app"
+        title="description"
+      >
+      </iframe>
+    </main>
+
+    <!-- These are a bunch of test elements. They are only here because they did not fit elsewhere on the website -->
+  </body>
+
+  <!-- Footer of the website. It contains information about my github and a reload page functionality -->
+  <footer>
+    <span>
       <!-- Include the library. -->
       <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
@@ -87,14 +92,8 @@
           },
         }).then((r) => r.text());
       </script>
-    </main>
-
-    <!-- These are a bunch of test elements. They are only here because they did not fit elsewhere on the website -->
-  </body>
-
-  <!-- Footer of the website. It contains information about my github and a reload page functionality -->
-  <footer>
-    <span>
+      <br />
+      <br />
       <a class="link" href="https://github.com/kyle1373">Github</a>
     </span>
   </footer>
