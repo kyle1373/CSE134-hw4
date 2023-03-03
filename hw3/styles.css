@@ -23,12 +23,12 @@ nav {
   display: table;
   width: 100%;
   table-layout: fixed;
-  margin-bottom: 20vw;
+  margin-bottom: 5em;
 }
 
 nav a {
   font-family: "RobotoCondensed";
-  font-size: 30px;
+  font-size: 1em;
 }
 
 nav li {
@@ -89,8 +89,8 @@ body {
 
 footer {
   font-family: "RobotoCondensed", sans-serif;
-  margin-top: 10vw;
-  font-size: 20px;
+  margin-top: 2em;
+  font-size: .9em;
   text-align: center;
   border-top-width: 2px;
 }
